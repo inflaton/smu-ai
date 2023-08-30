@@ -52,7 +52,7 @@ sudo apt install cmake
 
 ```
 git lfs install
-git clone https://huggingface.co/spaces/inflaton/learn-ai
+git clone https://huggingface.co/spaces/inflaton/smu-ai
 ```
 
 
@@ -78,7 +78,7 @@ python app.py
 
 Duplicate this HuggingFace Space from the UI or click the following link:
 
-- [Duplicate this space](https://huggingface.co/spaces/inflaton/learn-ai?duplicate=true)
+- [Duplicate this space](https://huggingface.co/spaces/inflaton/smu-ai?duplicate=true)
 
 Once duplicated, you can set up environment variables from the space settings. The values there will take precedence of those in `.env.example`.
 
