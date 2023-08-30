@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>SMU LIBRARY</title>
+
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+                        
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+        <link href="css/templatemo-topic-listing.css" rel="stylesheet">      
+
+
+<style>
+    .custom-block {
+    width: 100%; /* You can adjust the width as needed */
+    padding: 20px; /* Adjust padding as needed */
+    box-sizing: border-box;
+
+}
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    display: none;
+}
+
+.loading-spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+</style>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+
+
+
+    </head>
+    
+    <body id="top">
+
+        <main>
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <i class="bi-back"></i>
+                        <span>SMU LIBRARY</span>
+                    </a>
+
+                    <div class="d-lg-none ms-auto me-4">
+                        <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                    </div>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_1">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_2">Browse Topics</a>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_3">How it works</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_4">Speak to AskSMOO</a>
+                            </li>
+
+
+                        </ul>
+
+                        <div class="d-none d-lg-block">
+                            <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+
+            <section class="hero-section d-flex justify-content-center align-items-center" id=" ">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 col-12">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Homepage</a></li>
+
+                                    <li id="searched_query" class="breadcrumb-item active" aria-current="page">Results Listing for</li>
+                                </ol>
+                            </nav>
+
+                            <h2 class="text-white" id="result_title">Results Listing</h2>
+                        </div>
+
+                        <div class="col-lg-8 col-12 mx-auto">
+                            <form method="get" class="custom-form mt-3 pt-5 mb-lg-0 mb-0 pb-0" role="search">
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-text bi-search" id="basic-addon1">
+                                        
+                                    </span>
+
+                                    <input name="keyword" type="search" class="form-control" id="keyword" placeholder="What is quantization?" aria-label="Search">
+
+                                    <button id="query" type="button" class="form-control">Search</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            
+            <div class="loading-container" id="loadingContainer">
+                <div class="loading-spinner"></div>
+            </div>
+            
+            <section class="section-padding">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12 text-center">
+                            <h3 id="tits_res" class="mb-4">Results</h3>
+                        </div>
+
+
+
+
+
+
+
+
+                        <div id="res" class="col-lg-8 col-12 mt-3 mx-auto">
+
+
+                    </div>
+                </div>
+            </section>
+
+
+            
+ 
+       
+        </main>
+
+
+
+
+        <script>
+
+function getQueryParamByName(name, url) {
+    if (!url) {
+        url = window.location.href;
+    }
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+var queryParam = getQueryParamByName('query');
+function showLoading() {
+    loadingContainer.style.display = 'flex';
+}
+
+function hideLoading() {
+    loadingContainer.style.display = 'none';
+}
+
+
+
+
+
+document.getElementById('keyword').value = queryParam;
+const loadingContainer = document.getElementById('loadingContainer');
+
+
+const searchedQueryElement = document.getElementById('searched_query');
+searchedQueryElement.textContent = `Results Listing for ${queryParam}`;
+
+
+
+
+
+function navigateToPage() {     
+                var item  = document.getElementById('keyword');
+                var query = item.value
+
+                var url = "./results.html" + "?query="+query;
+                window.location.href = url;
+            }
+  
+            document.getElementById("query").onclick = navigateToPage;
+
+
+            const resContainer = document.getElementById('res');
+
+
+const searchedQueryElement2 = document.getElementById('result_title');
+searchedQueryElement2.innerText = `Results for: ${queryParam}`;
+
+const searchedQueryElement3 = document.getElementById('tits_res');
+searchedQueryElement3.innerText = `Results for ${queryParam}`;
+
+            
+
+            const url = `https://lks-hackathon.onrender.com/search?key=${queryParam}`;
+            showLoading();
+            axios.get(url)
+            .then(response => {
+                const apiData = response.data;
+                hideLoading();
+                apiData.Resources.forEach((resource, index) => {
+    resource.id = index + 1;
+  });
+  
+  
+              apiData.Resources.forEach(item => {
+  
+      const customBlock = document.createElement('div');
+      customBlock.className = 'custom-block custom-block-topics-listing bg-white shadow-lg mb-5';
+
+
+      if (item.cached == -1)
+
+      {
+        customBlock.innerHTML = `
+      <div class="d-flex">
+         
+          <div class="custom-block-topics-listing-info d-flex">
+              <div>
+                  <h5 class="mb-0">${item.title.charAt(0).toUpperCase() + item.title.slice(1)}</h5>
+                  <p class="mb-0">
+                      <span class="px-0 badge text-primary badge-primary">${item.type.charAt(0).toUpperCase() + item.type.slice(1)}</span>
+                      <br>
+                      <span class="px-0 badge text-danger badge-danger"> Published by ${item.publisher.charAt(0).toUpperCase()+item.publisher.slice(1)}</span>
+                  </p>
+                  <a href="${item.link}" target="_blank" class="">🔗 Available Online <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 14a1 1 0 0 0-1 1v3.077c0 .459-.022.57-.082.684a.363.363 0 0 1-.157.157c-.113.06-.225.082-.684.082H5.923c-.459 0-.571-.022-.684-.082a.363.363 0 0 1-.157-.157c-.06-.113-.082-.225-.082-.684L4.999 5.5a.5.5 0 0 1 .5-.5l3.5.005a1 1 0 1 0 .002-2L5.501 3a2.5 2.5 0 0 0-2.502 2.5v12.577c0 .76.083 1.185.32 1.627.223.419.558.753.977.977.442.237.866.319 1.627.319h12.154c.76 0 1.185-.082 1.627-.319.419-.224.753-.558.977-.977.237-.442.319-.866.319-1.627V15a1 1 0 0 0-1-1zm-2-9.055v-.291l-.39.09A10 10 0 0 1 15.36 5H14a1 1 0 1 1 0-2l5.5.003a1.5 1.5 0 0 1 1.5 1.5V10a1 1 0 1 1-2 0V8.639c0-.757.086-1.511.256-2.249l.09-.39h-.295a10 10 0 0 1-1.411 1.775l-5.933 5.932a1 1 0 0 1-1.414-1.414l5.944-5.944A10 10 0 0 1 18 4.945z" fill="currentColor"/></svg></a>
+  
+                  <br><br>
+               
+                  <p style="font-size:14px;"  class="mb-0">${item.description.split(' ').slice(0, 50).join(' ')}${item.description.split(' ').length > 50 ? '...' : ''}</p>
+               
+                  
+              </div>
+          </div>
+      </div>
+  `;
+      }
+
+      else{
+        customBlock.innerHTML = `
+      <div class="d-flex">
+         
+          <div class="custom-block-topics-listing-info d-flex">
+              <div>
+                  <h5 class="mb-0">${item.title.charAt(0).toUpperCase() + item.title.slice(1)}</h5>
+                  <p class="mb-0">
+                      <span class="px-0 badge text-primary badge-primary">${item.type.charAt(0).toUpperCase() + item.type.slice(1)}</span>
+                      <br>
+                      <span class="px-0 badge text-danger badge-danger"> Published by ${item.publisher.charAt(0).toUpperCase()+item.publisher.slice(1)}</span>
+                  </p>
+                  <a href="${item.link}" target="_blank" class="">🔗 Available Online <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 14a1 1 0 0 0-1 1v3.077c0 .459-.022.57-.082.684a.363.363 0 0 1-.157.157c-.113.06-.225.082-.684.082H5.923c-.459 0-.571-.022-.684-.082a.363.363 0 0 1-.157-.157c-.06-.113-.082-.225-.082-.684L4.999 5.5a.5.5 0 0 1 .5-.5l3.5.005a1 1 0 1 0 .002-2L5.501 3a2.5 2.5 0 0 0-2.502 2.5v12.577c0 .76.083 1.185.32 1.627.223.419.558.753.977.977.442.237.866.319 1.627.319h12.154c.76 0 1.185-.082 1.627-.319.419-.224.753-.558.977-.977.237-.442.319-.866.319-1.627V15a1 1 0 0 0-1-1zm-2-9.055v-.291l-.39.09A10 10 0 0 1 15.36 5H14a1 1 0 1 1 0-2l5.5.003a1.5 1.5 0 0 1 1.5 1.5V10a1 1 0 1 1-2 0V8.639c0-.757.086-1.511.256-2.249l.09-.39h-.295a10 10 0 0 1-1.411 1.775l-5.933 5.932a1 1 0 0 1-1.414-1.414l5.944-5.944A10 10 0 0 1 18 4.945z" fill="currentColor"/></svg></a>
+  
+                  <br><br>
+               
+                  <p style="font-size:14px;"  class="mb-0">${item.description.split(' ').slice(0, 50).join(' ')}${item.description.split(' ').length > 50 ? '...' : ''}</p>
+               
+                  <a target="_blank" href="https://smu-ai.netlify.app/?id=${item.cached}" class="custom-btn mt-3 mt-lg-4">Chat with PDF</a>
+                  
+              </div>
+          </div>
+      </div>
+  `;
+      }
+
+      
+  
+  
+      resContainer.appendChild(customBlock);
+  
+
+      });
+
+
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+        </script>
+
+
+
+
+
+
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/custom.js"></script>
+
+    </body>
+</html>

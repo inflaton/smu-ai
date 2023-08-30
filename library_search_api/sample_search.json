@@ -1,0 +1,158 @@
+{
+    "context": "L",
+    "adaptor": "Local Search Engine",
+    "@id": "https://ap01.alma.exlibrisgroup.com/primaws/rest/pub/pnxs/L/99646962702601",
+    "pnx": {
+        "display": {
+            "source": [
+                "Alma"
+            ],
+            "type": [
+                "book"
+            ],
+            "language": [
+                "eng"
+            ],
+            "title": [
+                "ChatGPT ™ "
+            ],
+            "subject": [
+                "Artificial intelligence -- Computer programs",
+                "ChatGPT"
+            ],
+            "format": [
+                "1 online resource (179 pages)"
+            ],
+            "identifier": [
+                "$$CISBN$$V9781394204649;$$COCLC$$V(OCoLC)1380466627;$$COCLC$$V(OCoLC)1383659408;$$COCLC$$V(OCoLC-P)1383659408;$$CISBN$$V9781394204632"
+            ],
+            "creationdate": [
+                "2023"
+            ],
+            "creator": [
+                "Baker, Pam, author.$$QBaker, Pam"
+            ],
+            "publisher": [
+                "Hoboken, New Jersey : John Wiley & Sons, Inc."
+            ],
+            "description": [
+                "ChatGPT For Dummies demystifies the artificial intelligence tool that can answer questions, write essays, and generate just about any kind of text it's asked for. This powerful example of generative AI is widely predicted to upend education and business. In this book, you'll learn how ChatGPT works and how you can operate it in a way that yields satisfactory results. You'll also explore the ethics of using AI-generated content for various purposes. Written by a journalist who's been on the front lines of artificial intelligence for over a decade, this book dives deep into ChatGPT's potential, so you can make informed decisions--without asking ChatGPT for help."
+            ],
+            "mms": [
+                "99646962702601"
+            ],
+            "series": [
+                "--For dummies.$$Q--For dummies.",
+                "For dummies$$QFor dummies"
+            ],
+            "contents": [
+                "Intro -- Title Page -- Copyright Page -- Table of Contents -- Introduction -- About This Book -- Foolish Assumptions -- Icons Used in This Book -- Beyond the Book -- Where to Go from Here -- Chapter 1 Introducing ChatGPT -- Setting Up an Account -- Comparing ChatGPT, Search Engines, and Analytics -- Understanding What ChatGPT Is and Isn't -- Unwrapping ChatGPT fears -- Competing with ChatGPT for your job -- Redefining the Chatbot with ChatGPT and ChatGPT Plus -- Comparing the two versions -- Sampling its many uses -- Discovering other forms of GPT -- Grabbing Headlines and Disrupting Businesses -- Grokking that ChatGPT is a harbinger of exponential change -- Weighing the initial effect on existing businesses and industries -- Bracing for future upheaval -- Breaking the spell of heartless machine overlords -- Opening the Door for Bigger AI Products -- Categorizing types of Generative AI -- Understanding ChatGPT's creator, OpenAI -- Chapter 2 Discovering How ChatGPT Works -- What's Different About ChatGPT -- Peeking at the ChatGPT Architecture -- Discovering the supercomputer and GPUs underneath -- Considering the importance of transformers -- Setting the stage: training the model -- Grasping the importance of the dialogue format -- Pondering ChatGPT's limitations -- Increasing the Number of Versions and Integrations -- Glimpsing ChatGPT in Microsoft add-ins -- Mainstreaming ChatGPT via the power of an API -- Checking out early ChatGPT API adopters -- Expanding the field of extensions -- Building New Businesses Based on ChatGPT -- Chapter 3 Writing Prompts for ChatGPT -- Prompting Basics -- Starting a chat -- Reviewing your chat history and more -- Understanding Prompt Engineering -- Circumventing Token Limits and User History Storage Issues -- Thinking in Threads -- Chaining Prompts and Other Tips and Strategies.",
+                "Chapter 4 Understanding GPT Models in ChatGPT -- Summarizing Model Progress -- Comparing GPT-4 to Earlier ChatGPT Models -- Choosing ChatGPT Models -- Learning about GPT-4 Advancements -- Adjusting to GPT-4's Limitations -- Chapter 5 Warnings, Ethics, and Responsible AI -- Making Responsible AI -- Troubling developments -- Protecting humans from humans using AI -- Understanding the good, the bad, and the ugly -- Heeding OpenAI Warnings -- Considering Copyright and IP Protections -- Searching for Predictability -- Reaching for reliability -- Hallucinating versus accuracy -- Humanizing the machine -- Mitigating Risks and Liability -- Chapter 6 Probing Professional and Other Uses for ChatGPT -- Finding ChatGPT Embedded in Software -- Locating ChatGPT in business software -- Integrating with everything, everywhere, all at once -- Zooming in on ChatGPT in virtual meetings -- Letting ChatGPT summarize and translate -- Searching for ChatGPT in other applications -- Seeing ChatGPT in AR, VR, and the Metaverse -- Discovering ChatGPT in search engines -- Coding with ChatGPT and Copilot X -- Learning Where to Use ChatGPT for Marketing -- Retrieving Smart Answers for HR -- Harnessing ChatGPT in Legal -- Storytelling in Journalism -- Consulting ChatGPT in Healthcare -- Cashing In on ChatGPT in Finance -- Chapter 7 Working with ChatGPT in Education -- Flipping Critical Thinking to a New Learning Model -- Leveraging ChatGPT to Aid Overworked Educators -- Changing How Subjects Are Taught -- Banning ChatGPT Stifles Education -- Chapter 8 Using ChatGPT in Daily Life -- Dying Keywords -- Moving from Information Search to Knowledge Assistants -- Living with Misinformation and Manipulation -- Narrowing Options -- Chapter 9 Recognizing the Ways ChatGPT and Generative AI Will Change the World -- Understanding What Is and Isn't of Real Concern.",
+                "Measuring the Good and Bad in ChatGPT -- Weighing Job Threats and Other ChatGPT Liabilities -- Sampling the Disruptions Ahead -- Chapter 10 Ten Other Generative AI Tools to Try -- DALL-E and DALL-E 2 -- DeepL Write and DeepL Translator -- Cedille -- Notion AI -- YouChat -- ChatSonic -- Poe -- Jasper -- Durable -- God Mode -- Index -- EULA."
+            ],
+            "relation": [
+                "$$Cform$$VPrint version: Baker, Pamela ChatGPT for Dummies Newark : John Wiley & Sons, Incorporated,c2023$$QChatGPT for Dummies"
+            ],
+            "place": [
+                "Hoboken, New Jersey :"
+            ],
+            "version": [
+                "1"
+            ]
+        },
+        "control": {
+            "sourcerecordid": [
+                "99646962702601"
+            ],
+            "recordid": [
+                "alma99646962702601"
+            ],
+            "sourceid": "alma",
+            "originalsourceid": [
+                "EBC7251200"
+            ],
+            "sourcesystem": [
+                "OREILLY"
+            ],
+            "sourceformat": [
+                "MARC21"
+            ],
+            "score": [
+                0.8532466750000001
+            ],
+            "isDedup": false
+        },
+        "addata": {
+            "aulast": [
+                "Baker"
+            ],
+            "aufirst": [
+                "Pam"
+            ],
+            "auinit": [
+                "P"
+            ],
+            "au": [
+                "Baker, Pam"
+            ],
+            "creatorfull": [
+                "$$NBaker, Pam$$LBaker$$FPam$$Rauthor"
+            ],
+            "date": [
+                "2023"
+            ],
+            "isbn": [
+                "9781394204649",
+                "9781394204632"
+            ],
+            "abstract": [
+                "ChatGPT For Dummies demystifies the artificial intelligence tool that can answer questions, write essays, and generate just about any kind of text it's asked for. This powerful example of generative AI is widely predicted to upend education and business. In this book, you'll learn how ChatGPT works and how you can operate it in a way that yields satisfactory results. You'll also explore the ethics of using AI-generated content for various purposes. Written by a journalist who's been on the front lines of artificial intelligence for over a decade, this book dives deep into ChatGPT's potential, so you can make informed decisions--without asking ChatGPT for help."
+            ],
+            "cop": [
+                "Hoboken, New Jersey"
+            ],
+            "pub": [
+                "John Wiley & Sons, Inc."
+            ],
+            "oclcid": [
+                "(ocolc)1380466627",
+                "(ocolc)1383659408",
+                "(ocolc-p)1383659408"
+            ],
+            "seriestitle": [
+                "For dummies"
+            ],
+            "format": [
+                "book"
+            ],
+            "genre": [
+                "book"
+            ],
+            "ristype": [
+                "BOOK"
+            ],
+            "btitle": [
+                "ChatGPT ™"
+            ]
+        },
+        "sort": {
+            "title": [
+                "ChatGPT ™ /"
+            ],
+            "author": [
+                "Baker, Pam, author."
+            ],
+            "creationdate": [
+                "2023"
+            ]
+        },
+        "facets": {
+            "frbrtype": [
+                "6"
+            ],
+            "frbrgroupid": [
+                "9046234732093519061"
+            ]
+        }
+    }
+}

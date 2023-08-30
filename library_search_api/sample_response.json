@@ -1,0 +1,84 @@
+{
+  "Resources": [
+    {
+      "description": "",
+      "link": "http://libproxy.smu.edu.sg/login?url=http://link.springer.com/10.1007/978-1-4842-9367-6",
+      "publisher": "Berkeley, CA: Apress L. P",
+      "summary": "",
+      "title": "Generative AI: How ChatGPT and Other AI Tools Will Revolutionize Business",
+      "type": "book"
+    },
+    {
+      "description": "",
+      "link": "http://libproxy.smu.edu.sg/login?url=http://link.springer.com/10.1007/978-1-4842-9579-3",
+      "publisher": "Berkeley, CA : Apress L. P.",
+      "summary": "",
+      "title": "Creative Prototyping with Generative AI : Augmenting Creative Workflows with Generative AI.",
+      "type": "book"
+    },
+    {
+      "description": "",
+      "link": "http://libproxy.smu.edu.sg/login?url=http://link.springer.com/10.1007/978-1-4842-9367-6",
+      "publisher": "Monrovia, CA : Apress L. P.",
+      "summary": "",
+      "title": "Generative AI : how ChatGPT and other AI tools will revolutionize business ",
+      "type": "book"
+    },
+    {
+      "description": "Generative AI has revolutionized the art world by providing an entirely new way to create unique and stunning visuals. In today's age of technology, it's essential to keep up with the latest tools and techniques, and this is where this comprehensive course on AI-generated art comes in. In this course, you will learn how to create stunning visuals using the latest AI art software, including DALL-E, Midjourney, and other tools. You will begin by learning the basics of generative AI and its applications in art. From there, you will explore various AI art software and learn how to use them to create beautiful pieces of art. The course will cover everything from generating simple images to creating complex visuals and textures. You will learn how to tweak parameters, adjust styles, and create custom datasets to get the exact output you want. Additionally, you will explore the different types of generative art, including style transfer, GANs, and neural style transfer. By the end of this course, you will be well-versed in generative AI and its applications in art. You will have a solid understanding of how to use various AI art software, including DALL-E, Midjourney, and others, to create stunning visuals. What You Will Learn Understand the theory behind AI and GPT-3 Learn how to construct effective text prompts for AI art Learn different framing techniques for AI-generated art Explore different AI art software and their unique features Implement image URLs for visual inspiration in Midjourney Learn how to perform image masking with DALL-E 2 Audience This course is ideal for anyone who is interested in exploring the potential of generative AI art. Whether you are an artist, graphic designer, photographer, or simply a creative person, this course will equip you with the skills and knowledge to produce stunning and unique AI-generated artwork. No prior experience in programming or AI is required as this course is designed for beginners. About The Author Oliver Theobald: Oliver Theobald is an accomplished technical writer and the best-selling author of \"Machine Learning for Absolute Beginners\". With expertise in AI, fintech, and cloud computing, he has worked in various technical roles across the globe. Oliver currently splits his time between China and Japan, where he continues to expand his knowledge and passion for emerging technologies. As an instructor, Oliver brings a unique approach to teaching complex topics. He believes in cutting through the jargon and presenting information in a clear, concise, and engaging manner. His course content is designed to be easy to understand, yet powerful in its application. Whether you're an absolute beginner or an experienced professional, Oliver's goal is to help you build the skills and knowledge you need to succeed in your field.",
+      "link": "https://learning.oreilly.com/library/view/Generative-AI-art/9781835084304/?ar",
+      "publisher": "Place of publication not identified : Packt Publishing",
+      "summary": "",
+      "title": "Generative AI art for beginners.",
+      "type": "video"
+    },
+    {
+      "description": "Generative AI and ChatGPT have the potential to transform industries and society by improving efficiency, enhancing creativity, and enabling more personalized experiences. If you are someone who is looking to stay ahead of the curve in this rapidly evolving digital age and utilize its potential, this book is for you.",
+      "link": "http://libproxy.smu.edu.sg/login?url=https://libproxy.smu.edu.sg/sso/skillport/sso/skillport?context=164563",
+      "publisher": "Los Angeles : BPB Publications",
+      "summary": "",
+      "title": "Rise of Generative AI and ChatGPT.",
+      "type": "book"
+    },
+    {
+      "description": "Ongoing lawsuits could affect everyone who uses generative AI.",
+      "link": "http://libproxy.smu.edu.sg/login?url=https://doi.org/10.1126/science.adi0656?locatt=mode:legacy",
+      "publisher": "United States: The American Association for the Advancement of Science",
+      "summary": "",
+      "title": "Generative AI meets copyright",
+      "type": "article"
+    },
+    {
+      "description": "",
+      "link": "http://libproxy.smu.edu.sg/login?url=http://link.springer.com/10.1007/978-1-4842-9579-3",
+      "publisher": "Berkeley, CA: Apress L. P",
+      "summary": "",
+      "title": "Creative Prototyping with Generative AI: Augmenting Creative Workflows with Generative AI",
+      "type": "book"
+    },
+    {
+      "description": "",
+      "link": "http://libproxy.smu.edu.sg/login?url=https://www.tandfonline.com/doi/abs/10.1080/08956308.2023.2213102",
+      "publisher": "Routledge",
+      "summary": "",
+      "title": "The Transformative Potential of Generative AI: A Conversation with Ethan MollickJim Euchner talks with Ethan Mollick about generative AI: its potential to transform work and what organizations-and individuals-ought to do . . . now",
+      "type": "article"
+    },
+    {
+      "description": "",
+      "link": "http://libproxy.smu.edu.sg/login?url=https://www.proquest.com/docview/2352323896?pq-origsite=primo",
+      "publisher": "United States: Nature Publishing Group",
+      "summary": "",
+      "title": "Assessing the impact of generative AI on medicinal chemistry",
+      "type": "article"
+    },
+    {
+      "description": "",
+      "link": "http://libproxy.smu.edu.sg/login?url=https://doi.ieeecomputersociety.org/10.1109/MS.2023.3300574",
+      "publisher": "",
+      "summary": "",
+      "title": "Generative AI Assistants in Software Development Education: A vision for integrating Generative AI into educational practice, not instinctively defending against it",
+      "type": "article"
+    }
+  ]
+}
