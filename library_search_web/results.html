@@ -248,7 +248,7 @@ searchedQueryElement3.innerText = `Results for ${queryParam}`;
 
             
 
-            const url = `https://lks-hackathon.onrender.com/search?key=${queryParam}`;
+            const url = `https://library-search-api.onrender.com/search?key=${queryParam}`;
             showLoading();
             axios.get(url)
             .then(response => {
