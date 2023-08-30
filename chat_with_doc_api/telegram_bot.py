@@ -14,9 +14,7 @@ from telegram.ext import (
     filters,
 )
 
-from app_modules.init import app_init
-
-llm_loader, qa_chain = app_init()
+from app_modules.init import *
 
 ctx = ssl.create_default_context()
 ctx.set_ciphers("DEFAULT")
@@ -34,6 +32,7 @@ if __version_info__ < (20, 0, 0, "alpha", 1):
     )
 
 TOKEN = os.getenv("TELEGRAM_API_TOKEN")
+ENDPOINT = os.getenv("CHAT_API_URL")
 
 
 # Define a few command handlers. These usually take the two arguments update and
@@ -56,11 +55,16 @@ async def chat_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
     print(update)
     tic = time.perf_counter()
     try:
-        result = qa_chain.call_chain(
-            {"question": update.message.text, "chat_history": []}, None
-        )
-
-        result = result["answer"]
+        message = {
+            "question": update.message.text,
+            "chat_history": [],
+        }
+        print(message)
+        x = requests.post(ENDPOINT, json=message).json()
+        temp = time.perf_counter()
+        print(f"Received response in {temp - tic:0.4f} seconds")
+        print(x)
+        result = x["result"]
         print(result)
         await update.message.reply_text(result[0:8192])
         toc = time.perf_counter()
